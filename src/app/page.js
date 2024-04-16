@@ -43,10 +43,10 @@ export default function Home() {
 
     return (
         <main className="flex min-h-screen flex-col items-center p-24">
-            <h1 className="text-7xl font-bold text-center" style={{color: 'var(--fg)'}}>
+            <h1 className="text-6xl font-bold text-center" style={{color: 'var(--fg)'}}>
                 URL SHORTENER
             </h1>
-            <p>Shorten URL with ease</p>
+            <p>Shorten URLs with ease</p>
 
             <form action="" className="url-form" onSubmit={handleFormSubmit}>
                 <input type="text" placeholder="Enter URL to shorten" ref={txt}/>
