@@ -37,7 +37,7 @@ export default function Home() {
         const data = await res.json();
         txt.current.value = "";
 
-        lbl.current.innerHTML = `Shortened URL: <a href="${data.url}" target="_blank" class="link">${data.url}</a>`
+        lbl.current.innerHTML = `URL: <a href="${data.url}" target="_blank" class="link">${data.url}</a>`
         lbl.current.classList.remove("hidden");
     }
 
@@ -51,7 +51,7 @@ export default function Home() {
             <form action="" className="url-form" onSubmit={handleFormSubmit}>
                 <input type="text" placeholder="Enter URL to shorten" ref={txt}/>
                 <button type="submit"><Image src="/next.svg" width={50} height={50} alt=""/></button>
-                <label className="hidden" ref={lbl}>Shortened URL: </label>
+                <label className="hidden" ref={lbl}></label>
             </form>
         </main>
     );
