@@ -11,7 +11,7 @@ export async function POST(req) {
         return new Response(JSON.stringify({ url: urlExists.shortUrl }), { status: 200 });
     }
 
-    const domain = 'https://shx.vercel.app/'
+    const domain = 'https://shnx.vercel.app/'
     let shortUrl = domain + getRandomHex();
     while (await Url.findOne({shortUrl})) {
         shortUrl = domain + getRandomHex();
